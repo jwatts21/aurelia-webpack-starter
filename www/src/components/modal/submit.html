@@ -1,0 +1,16 @@
+<template>
+   <ai-dialog>
+      <ai-dialog-header>
+      <h3>Mobile Phone Confirmation</h3>
+      </ai-dialog-header>
+      <ai-dialog-body>
+         <p>${message}</p>
+         <input type="text"></input>
+      </ai-dialog-body>
+      <ai-dialog-footer>
+      <button click.trigger="controller.cancel()">Cancel</button>
+      <button click.trigger="controller.ok()">Ok</button>
+    </ai-dialog-footer>
+   </ai-dialog>
+	
+</template>

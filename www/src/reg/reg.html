@@ -1,0 +1,26 @@
+<template>
+        <form role="form" method="post" submit.delegate="save()" validation-renderer="bootstrap-form" validation-errors.bind="errors">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input id="fname" type="text" placeholder="First Name" name="firstName" value.bind="user.firstName & validate" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input id="lname" type="text" placeholder="Last Name" name="lastName" value.bind="user.lastName & validate" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="phone">Enter Phone Number</label>
+            <input id="phone" type="phone" placeholder="Phone" name="phone" value.bind="user.phone & validate" class="form-control"/>
+          </div>
+          <div class="form-group">
+            <label for="custId">Customer Id:</label>
+            <input id="custId" type="text" placeholder="Customer Id" name="custId" value.bind="user.custId & validate" class="form-control"/>
+          </div>
+          <div class="alert alert-info" role="alert">
+           <strong>Heads up!</strong> Please enter the code on the next screen to complete your notification setup.
+          </div>
+          <div class="form-group">
+            <button type="submit" class="regbtn btn btn-primary" disabled.bind="errors.length">Submit</button>
+          </div>
+        </form>
+</template>
